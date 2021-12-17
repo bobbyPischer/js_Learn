@@ -1,6 +1,6 @@
 
 
-/*
+
 
 let country = "Australia";
 let continent = "Australia";
@@ -197,5 +197,4 @@ if (markHigherBMI) {
     else { console.log(`${country}'s population is ${averagePopulation - population} below average`);
 
     }
-    */
    
