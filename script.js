@@ -197,4 +197,3 @@ if (markHigherBMI) {
     else { console.log(`${country}'s population is ${averagePopulation - population} below average`);
 
     }
-   
