@@ -15,16 +15,11 @@ const companies= [
 
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
-// // for (let i = 0; i < companies.length; i++) {
-// //     console.log(companies[i]);
-// }
 
-
-
-// forEach
-// companies.forEach(function(company) {
-//     console.log(company.);
-// });
+forEach
+companies.forEach(function(company) {
+    console.log(company);
+});
 
 
 //---------------------------------------------------------------------------------
@@ -35,33 +30,33 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 //OLD WAY (ES 5)
 
-// let canDrink = [];
-// for(let i = 0; i < ages.length; i++) {
-//     if(ages[i] >= 21) {
-//         canDrink.push(ages[i]);
-//     }
-// }
+let canDrink = [];
+for(let i = 0; i < ages.length; i++) {
+    if(ages[i] >= 21) {
+        canDrink.push(ages[i]);
+    }
+}
 
 //BETTER WAY (ES 6)
-// const canDrink = ages.filter(age => age >= 21);
+const canDrink = ages.filter(age => age >= 21);
 
 
 
 // Filter retail companies
 
-// const retailCompanies = companies.filter(company => company.category === 'Retail');
+const retailCompanies = companies.filter(company => company.category === 'Retail');
 
 // // Get 80s companies
 
-// const eightiesCompanies = companies.filter(company => company.start >= 1980 && company.start <= 1989);
+const eightiesCompanies = companies.filter(company => company.start >= 1980 && company.start <= 1989);
 
-// console.log(eightiesCompanies);
+console.log(eightiesCompanies);
 
 //  // Companies that lasted longer than 10 years
 
-//  const lastedTen = companies.filter(company => (company.end >= company.start + 10));
+ const lastedTen = companies.filter(company => (company.end >= company.start + 10));
 
-//  console.log(lastedTen);
+ console.log(lastedTen);
 
 //-------------------------------------------------------------------------------------------------------------
 
@@ -71,23 +66,23 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 //OLD WAY (ES 5)
 
-// const companyNames = companies.map(function(company) {
-//     return company.name;
-// });
-// console.log(companyNames)
+const companyNames = companies.map(function(company) {
+    return company.name;
+});
+console.log(companyNames)
 
 //BETTER WAY (ES 6)
 
-// const testMap = companies.map(company => `${company.name} [${company.start}] [${company.end}]`);
-// console.log(testMap)
+const testMap = companies.map(company => `${company.name} [${company.start}] [${company.end}]`);
+console.log(testMap)
 
 // USING MULTIPLE MAPS TO MANIPULATE DATA MANY TIMES
 
-// const ageMap = ages
-//     .map(age => Math.sqrt(age))
-//     .map(age => age * 2);
+const ageMap = ages
+    .map(age => Math.sqrt(age))
+    .map(age => age * 2);
 
-// console.log(ageMap);
+console.log(ageMap);
 
 //---------------------------------------------------------------------------------
 
@@ -97,19 +92,19 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // OLD WAY (ES 5)
 
-// const sortCompanies = companies.sort(function(c1, c2) {
-//     if(c1.start > c2.start) {
-//         return 1;
-//     } else {
-//         return -1;
-//     }
-// });
-// console.log(sortCompanies);
+const sortCompanies = companies.sort(function(c1, c2) {
+    if(c1.start > c2.start) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+console.log(sortCompanies);
 
 // BETTER WAY (ES 6) with TERNARY operator instead of if/else
 
-// const sortedCompanies = companies.sort((a, b) => a.start > b.start ? 1 : -1);
-//     console.log(sortedCompanies);
+const sortedCompanies = companies.sort((a, b) => a.start > b.start ? 1 : -1);
+    console.log(sortedCompanies);
 
 // Sort Ages in Ascending Order
 const sortAgeAscending = ages.sort((a, b) => a - b);
@@ -125,39 +120,39 @@ const sortAgeDescending = ages.sort((a, b) => b - a);
 
 //With a For Loop 
 
-// let ageSum = 0;
-// for(let i = 0; i < ages.length; i++) {
-//     ageSum += ages[i];
-// }
-// console.log(ageSum);
+let ageSum = 0;
+for(let i = 0; i < ages.length; i++) {
+    ageSum += ages[i];
+}
+console.log(ageSum);
 
 // Using REDUCE (Long Way)
 
-// const ageSum2 = ages.reduce(function(total, age) {
-//     return total + age;
-// },0);
+const ageSum2 = ages.reduce(function(total, age) {
+    return total + age;
+},0);
 
-// console.log(ageSum2);
+console.log(ageSmu2);
 
 // BEST WAY
 
-// const ageSum2 = ages.reduce((total, age) => total + age, 0);
+const ageSum2 = ages.reduce((total, age) => total + age, 0);
 
-// console.log(ageSum2);
+console.log(ageSum2);
 
 
 // //Total Years For All Companies
 
-// const totalYears = companies.reduce(function(total, company) {
-//     return total + (company.end - company.start);
-// }, 0); 
+const totalYears = companies.reduce(function(total, company) {
+    return total + (company.end - company.start);
+}, 0); 
 
 // // Same using arrow functions
 
-// const totalYears2 = companies.reduce((total, company) => total + company.end - company.start, 0);
+const totalYears2 = companies.reduce((total, company) => total + company.end - company.start, 0);
 
 
-// console.log(totalYears2);
+console.log(totalYears2);
 
 
 // Combine Methods
